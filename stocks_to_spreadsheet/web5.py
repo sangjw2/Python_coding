@@ -88,38 +88,7 @@ class GetSource_MakeSheet():
             self.ws.column_dimensions[alphabet[self.name_number.index(
                 i)]].auto_size = True  # 열 너비 자동 맞춤
 
-# def GetSource_MakeSheet(cos, pages):
 
-#         # SpreadSheet
-#         wb = Workbook()
-#         ws = wb.active
-
-#         ws.title = "Main Sheet"
-
-#         cell = ws['A1']
-#         cell.value = "종목명"
-
-#         for m in c:  # 종목명 삽입
-#             cell = ws['A'+str(50*pages+(c.index(m)+2))]  # 2345
-#             cell.value = m
-
-#         alphabet = list(string.ascii_uppercase)
-
-#         for n in name_number:  # name_number 삽입
-#             s = name_number.index(n)
-#             cell = ws[alphabet[s+1]+'1']
-#             cell.value = n
-
-#         for i in name_number:  # insert every value on cell
-#             for j in c:
-#                 s = name_number.index(i)
-#                 cell = ws[alphabet[s+1]+str(c.index(j)+2)]
-#                 cell.value = b[j+' '+i]
-#             ws.column_dimensions[alphabet[name_number.index(i)]].auto_size = True  # 열 너비 자동 맞춤
-
-
-#     today = time.strftime('%Y-%m-%d', time.localtime(time.time()))
-#     wb.save(today+".xlsx")
 data = int(input("Data Source를 선택해주십시오 (1 : 코스피, 2 : 코스닥): "))
 page = int(input("몇 페이지까지 확인하시겠습니까?(1페이지 당 50종목): "))
 GetSource_MakeSheet(data, page)
